@@ -1,13 +1,12 @@
 
-
-=========================
-=== Mars Rover Readme ===
-=========================
+Mars Rover Readme
+=================
 
 Written by: Bruce MacKenzie
 
 
-=== Description ===
+Description
+-----------
 A squad of robotic rovers are to be landed by NASA on a plateau on Mars. This
 plateau, which is curiously rectangular, must be navigated by the rovers so that
 their on board cameras can get a complete view of the surrounding terrain to
@@ -16,7 +15,8 @@ send back to Earth.
 See the input section on configuring the rovers.
 
 
-=== Run Instructions ===
+Run Instructions
+----------------
 1. Run the app
 
 From the mars_rover directory:
@@ -52,7 +52,8 @@ For help on the unittest CLI:
     python mars_rover_tests.py --help
 
 
-=== Input Data ===
+Input Data
+--------------
 An input file must contain as a minimum the following:
 
     5 5
@@ -77,12 +78,14 @@ rover simply won't move.  There can be any number and combination of moves, even
 The file may contain any number of rovers but each must have both lines.
 
 
-=== Output ===
+Output
+------
 The output is the final position of each rover, printed on separate lines to
 stdout.
 
 
-=== Design Decisions ===
+Design Decisions
+-----------
 For low-level details see the docstrings, accessible via the interactive prompt:
 
     python -i
@@ -91,20 +94,23 @@ For low-level details see the docstrings, accessible via the interactive prompt:
     >>> help(mars_rover.Rover)
 
 
-== Input ==
+Input
+-----
 It was decided input would be provided to the app via a filename passed as a
 command line argument.  The file is read and parsed by MissionControl.
 
 Unit test data is hard-coded into the mars_rover_tests.py module.
 
 
-== Error handling ==
+Error handling
+--------------
 Input is validated by each class's constructor by raising exceptions.  main()
 will catch any exception raised and display it in a user-friendly manner, hiding
 the backtrace.  Error handling is comprehensive.
 
 
-== Testing ==
+Testing
+-------
 Python's unittest framework is used to test the Planet and Rover classes.  Each
 test method contains a considerable number of asserts.  This may be overkill, 
 but the prinicple is to convey proper testing of boundary cases, code coverage,
@@ -117,7 +123,8 @@ tests are carried out manually but of course could easily be automated.  See
 tests/functional_tests.txt for more information on these tests.
 
 
-== OO ==
+OO
+--
 The classes in mars_rover are designed to ensure low coupling and high cohesion.
 
 The test classes make use of polymorphism to share common test data.
