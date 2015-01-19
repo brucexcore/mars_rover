@@ -1,0 +1,59 @@
+=== Mars Rover Functional Tests ===
+
+run instructions (from the mars_rover directory):
+
+    python lib/mars_rover.py tests/<test_file>
+
+
+1. The first two tests use valid data:
+
+test_inputs.txt
+    A simple test using two rovers.  Expected output is:
+
+        1 3 N
+        5 1 E
+
+
+test_inputs2.txt
+    Contains one rover and a larger map.  Expected output:
+    is:
+
+        18 18 N
+
+
+2. The following tests use invalid data and expect certain errors:
+
+invalid_inputs1.txt
+    Second line of second rover's data is missing.  Expected output:
+
+        Input file incomplete: tests/invalid_inputs1.txt
+        see README.md for more info on input data.
+
+
+invalid_inputs2.txt
+    Invalid rover starting position.  Expected output:
+
+        Input file format invalid, line: 3 S E
+        see README.md for more info on input data.
+
+
+invalid_inputs3.txt
+    Missing mars plateau dimension.  Expected output:
+
+        Input file format invalid, line: 5
+        see README.md for more info on input data.
+
+
+3. The final tests validate error handling in main():
+
+invalid_inputs4.txt
+    Second line of rover data is missing.  Expected output:
+
+        Input file incomplete: tests/invalid_inputs1.txt
+        see README.md for more info on input data.
+
+
+invalid_inputs_dne.txt
+    Missing file.  Expected output:
+
+        Input file tests/invalid_inputs_dne.txt does not exist
